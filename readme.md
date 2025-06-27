@@ -11,7 +11,6 @@ This demo showcases **Agent-to-Agent autonomous payments** between two simulated
 - The **retail agent**, parses the invoice and initiates a **PayPal Payment** to the vendor.
 - The **vendor agent** on payment confirmation generates a receipt and dispatches the goods.
 - Payments are made **autonomously**, simulating real-world A2A interactions without human intervention.
-`
 
 ## Watch Demo
 
