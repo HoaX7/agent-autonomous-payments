@@ -1,0 +1,33 @@
+{
+  "name": "agent-payment-demo",
+  "version": "0.0.1",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/lodash-es": "^4.17.12",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^4.1.10",
+    "vite": "^6.0.0",
+    "vite-plugin-solid": "^2.11.6"
+  },
+  "dependencies": {
+    "@solidjs/router": "^0.15.1",
+    "@tailwindcss/vite": "^4.1.10",
+    "clsx": "^2.1.1",
+    "daisyui": "^5.0.43",
+    "lodash": "^4.17.21",
+    "lucide-solid": "^0.517.0",
+    "marked": "^15.0.12",
+    "solid-js": "^1.9.5",
+    "solid-transition-group": "^0.3.0",
+    "solid-use": "^0.9.1"
+  }
+}

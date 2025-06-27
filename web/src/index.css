@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@plugin "daisyui" {
+	themes: light --default, dark --prefersdark;
+}
+
+:root {
+	background: #000;
+}
+
+.retail {
+	background-size:
+		40px 40px,
+		40px 40px,
+		100% 100%;
+	background-image:
+		linear-gradient(to right, oklch(from grey l c h / 10%) 1px, transparent 1px),
+		linear-gradient(to bottom, oklch(from grey l c h / 10%) 1px, transparent 1px),
+		linear-gradient(#2C3E50, #000000);
+}
+
+.provider {
+	@apply text-white;
+	background-size: 40px 40px, 100% 100%;
+	background-image: radial-gradient(circle, oklch(100% 0 0 / 0.2) 1px, rgba(0, 0, 0, 0) 1px), linear-gradient(#0D324D, #7F5A83);
+}
+.glass {
+	@apply bg-white/10;
+	backdrop-filter: blur(8px);
+	background-image: none;
+}
+@keyframes animate-ra {
+	0% {
+		transform: translate3d(0, 5dvh, 0);
+	}
+	25% {
+		transform: translate3d(0, 50dvh, 0);
+	}
+	50% {
+		transform: translate3d(-45dvw, 50dvh, 0);
+	}
+	75% {
+		transform: translate3d(-45dvw, 5dvh, 0);
+	}
+	100% {
+		transform: translate3d(0, 5dvh, 0);
+	}
+}
+.retail-agent {
+	animation: animate-ra 20s ease-in-out 10s infinite backwards;
+}
+.slide {
+	transition: all .25s;
+}
+.slide-enter,
+.slide-exit-to {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+.slide-right-left {
+	animation: animate-rl .25s ease-in;
+}
+
+@keyframes animate-rl {
+	0% {
+		transform: translateX(50px);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+.md-content > ul {
+	list-style: disc;
+	@apply ml-5
+}
+.md-content > ul > li {
+	@apply my-3
+}

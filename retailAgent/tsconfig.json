@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "es2024",
+    "module": "esnext",
+    "strict": true,
+    "esModuleInterop": true,
+    "outDir": "dist",
+    "moduleResolution": "node"
+  },
+  "include": ["*.ts", "agent/agent.ts" ]
+}

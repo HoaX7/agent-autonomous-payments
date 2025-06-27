@@ -1,0 +1,51 @@
+{
+  "name": "retailagent",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "retail:agent": "npx tsx retailAgent/index.ts",
+    "retail:server": "npx tsx retailAgent/server.ts",
+    "retail:build": "node build.mjs retail",
+    "vendor:agent": "npx tsx vendorAgent/index.ts",
+    "vendor:server": "npx tsx vendorAgent/server.ts",
+    "vendor:build": "node build.mjs vendor",
+    "client": "npx tsx client/index.ts",
+    "a2a:cli": "npx tsx client/cli.ts",
+    "payment": "npx tsx paymentProcessor/index.ts",
+    "build": "npm run retail:build && npm run vendor:build",
+    "deploy": "cd cdk && npx cdk deploy",
+    "seed": "npx tsx ddb/seed.ts",
+    "destroy": "cd cdk && npx cdk destroy"
+  },
+  "keywords": [],
+  "author": "HoaX7",
+  "license": "ISC",
+  "dependencies": {
+    "@a2a-js/sdk": "^0.2.1",
+    "@aws-sdk/client-dynamodb": "^3.828.0",
+    "@aws-sdk/client-sqs": "^3.831.0",
+    "@aws-sdk/lib-dynamodb": "^3.828.0",
+    "@genkit-ai/googleai": "^1.12.0",
+    "axios": "^1.10.0",
+    "cls-hooked": "^4.2.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "genkit": "^1.12.0",
+    "jspdf": "^3.0.1",
+    "lodash": "^4.17.21",
+    "serverless-http": "^3.2.0",
+    "sqs": "file:sqs",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@types/cls-hooked": "^4.3.9",
+    "@types/lodash": "^4.17.18",
+    "@types/node": "^24.0.1",
+    "esbuild": "^0.25.5"
+  }
+}
