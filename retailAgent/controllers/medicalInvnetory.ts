@@ -23,19 +23,19 @@ export const simulate = async (req: Request, res: Response) => {
     }
 
     // delete logs
-    // await deleteLogs()
+    await deleteLogs()
 
     // restockInventory(randomArr) // for dev
     // notify the agent to re-stock items
-    // if (process.env.QUEUE_URL) {
-    //   console.log("dispatching SQS:", process.env.QUEUE_URL);
-    //   await sendToQueue(process.env.QUEUE_URL, { restockInventory: true, items: randomArr });
-    // } else {
-    //   await logActivity({
-    //     event: "error",
-    //     message: "Could not trigger SQS. Invalid url",
-    //   });
-    // }
+    if (process.env.QUEUE_URL) {
+      console.log("dispatching SQS:", process.env.QUEUE_URL);
+      await sendToQueue(process.env.QUEUE_URL, { restockInventory: true, items: randomArr });
+    } else {
+      await logActivity({
+        event: "error",
+        message: "Could not trigger SQS. Invalid url",
+      });
+    }
 
     jsonSuccess(res, randomArr);
   } catch (err: any) {
